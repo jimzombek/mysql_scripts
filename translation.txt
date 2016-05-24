@@ -1,0 +1,14 @@
+
+DELETE FROM translation;
+DROP TABLE translation;
+
+CREATE TABLE translation (
+   id int NOT NULL AUTO_INCREMENT, 
+   name varchar(40),
+   description text,
+   translation_version ENUM('KJV', 'NIV'),
+   PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO translation VALUES (default, 'King James Version',"The King James Version Bible (KJV) was authorized by King James I and is sometimes referred to as the 'Authorized Version'. It was translated by the Church of England and was first published in 1611.",'KJV');
+SELECT * FROM translation WHERE translation = 'NIV';

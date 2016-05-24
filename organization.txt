@@ -1,0 +1,22 @@
+
+DELETE FROM organization;
+DROP TABLE organization;
+
+CREATE TABLE organization ( 
+   id int NOT NULL AUTO_INCREMENT, 
+   name varchar(32) NOT NULL,
+   addressLine1 varchar(32) NOT NULL,
+   addressLine2 varchar(32) NOT NULL,
+   city varchar(32) NOT NULL,
+   providence varchar(32) NOT NULL,
+   postalCode varchar(8) NOT NULL,
+   country varchar(32) NOT NULL,
+   yearStarted int NOT NULL,
+   affiliation varchar(32) NOT NULL,
+   webSite varchar(32) NOT NULL,
+   membershipSize int,
+   PRIMARY KEY (id) 
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+
+INSERT INTO organization VALUES (default, 'org 1 name','org 1 al','org 1 a2','org 1 city','org 1 providence','12345','org 1 country','1990','org 1 affiliation','org 1 web site','100');
+INSERT INTO organization VALUES (default, 'org 2 name','org 2 al','org 2 a2','org 2 city','org 2 providence','54321','org 2 country','2990','org 2 affiliation','org 2 web site','100');
