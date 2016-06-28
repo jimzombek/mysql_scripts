@@ -14,4 +14,5 @@ CREATE TABLE personality (
 
 INSERT INTO personality VALUES (default, '1','Personality Name 1','Personality Title 1','Personality Bio 1','');
 INSERT INTO personality VALUES (default, '2','Personality Name 2','Personality Title 2','Personality Bio 2','');
+INSERT INTO personality VALUES (default, '2','Personality Name 3','Personality Title 3','Personality Bio 3','');
 
