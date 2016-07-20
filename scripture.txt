@@ -1,0 +1,17 @@
+ 
+DELETE FROM scripture;
+DROP TABLE scripture;
+
+CREATE TABLE scripture (
+   id int NOT NULL AUTO_INCREMENT, 
+   translationId int,
+   book varchar(25), 
+   chapter int,
+   verse int,
+   text text,
+   prophecy boolean,
+   PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO scripture VALUES (default, 1, 'Genesis', 1, 1, "Gen 1.1", 0);
+SELECT * FROM scriptue WHERE scripture = 1;
