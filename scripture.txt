@@ -4,14 +4,17 @@ DROP TABLE scripture;
 
 CREATE TABLE scripture (
    id int NOT NULL AUTO_INCREMENT, 
-   translationId int,
-   book varchar(25), 
-   chapter int,
-   verse int,
-   text text,
-   prophecy boolean,
+   testament ENUM('OLD', 'NEW'),
+   book varchar(25) NOT NULL, 
+   author varchar(25) NOT NULL, 
+   chapter int NOT NULL,
+   verse int NOT NULL,
+   prophecy boolean NOT NULL,
    PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO scripture VALUES (default, 1, 'Genesis', 1, 1, "Gen 1.1", 0);
+INSERT INTO scripture VALUES (default, 'OLD', 'Genesis', 'Moses', 1, 1, 0);
+INSERT INTO scripture VALUES (default, 'NEW', 'Matthew', 'Matthew', 24, 2, 0);
+
+SELECT * FROM scriptue;
 SELECT * FROM scriptue WHERE scripture = 1;

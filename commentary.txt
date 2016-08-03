@@ -5,15 +5,14 @@ DROP TABLE commentary;
 CREATE TABLE commentary ( 
    id int NOT NULL AUTO_INCREMENT, 
    personalityId int NOT NULL,
-   scriptureId int NOT NULL,
+   passageId int NOT NULL,
    text text NOT NULL,
    PRIMARY KEY (id), 
-   CONSTRAINT FOREIGN KEY (personalityId) REFERENCES personality (id) ON DELETE CASCADE,
-   CONSTRAINT FOREIGN KEY (scriptureId) REFERENCES scripture (id) ON DELETE CASCADE
- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+   CONSTRAINT FOREIGN KEY (personalityId) REFERENCES personality (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO commentary VALUES (default, '1','1','commentary for scripture 1 goes here.');
-INSERT INTO commentary VALUES (default, '1','2','commentary for scripture 2 goes here.');
+INSERT INTO commentary VALUES (default, '1','1','commentary for passage 1 goes here.');
+INSERT INTO commentary VALUES (default, '1','2','commentary for passage 2 goes here.');
 
 
 

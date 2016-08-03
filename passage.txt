@@ -1,0 +1,34 @@
+
+DELETE FROM passage;
+DROP TABLE passage;
+
+CREATE TABLE passage (
+   id int NOT NULL AUTO_INCREMENT,
+   translationId int NOT NULL,
+   scriptureId int NOT NULL,
+   text tinytext NOT NULL,
+   PRIMARY KEY (id),
+   CONSTRAINT FOREIGN KEY (translationId) REFERENCES translation (id) ON DELETE CASCADE,
+   CONSTRAINT FOREIGN KEY (scriptureId) REFERENCES scripture (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO passage VALUES (default, '1','1','in the beginning');
+INSERT INTO passage VALUES (default, '1','2','in the end');
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+  
+
