@@ -4,9 +4,9 @@ DROP TABLE translation;
 
 CREATE TABLE translation (
    id int NOT NULL AUTO_INCREMENT, 
-   name varchar(40),
-   history text,
-   translation_version ENUM('KJV', 'NIV'),
+   name varchar(40) NOT NULL,
+   history text NOT NULL,
+   version ENUM('KJV', 'NIV'),
    PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
