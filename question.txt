@@ -10,12 +10,11 @@ CREATE TABLE question (
    type ENUM('MULTIPLE_CHOICE', 'DRAG_DROP', 'MATCHING', 'TRUE_FALSE'),
    testament ENUM('OLD', 'NEW') NOT NULL,
    difficulty ENUM('NEW_BELIEVER','DISCIPLE','SAINT') NOT NULL,
-   lastTimePresented timestamp NOT NULL,
    sinceVersion float NOT NULL,
    PRIMARY KEY (id) NOT NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
 
-INSERT INTO question VALUES (default,'1','1','How old was Moses when he died?','MULTIPE_CHOICE','OLD','DISCIPLE','2016-08-10 13:00:00','1.0');
-INSERT INTO question VALUES (default,'1','1','How many books in the bible','MULTIPE_CHOICE','OLD','SAINT','2016-08-07 11:00:00','1.0');
+INSERT INTO question VALUES (default,'1','1','How old was Moses when he died?','MULTIPE_CHOICE','OLD','DISCIPLE','1.0');
+INSERT INTO question VALUES (default,'1','1','How many books in the bible','MULTIPE_CHOICE','OLD','SAINT','1.0');
   
 
