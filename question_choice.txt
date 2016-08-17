@@ -1,0 +1,17 @@
+
+DELETE FROM question_choice;
+DROP TABLE question_choice;
+
+CREATE TABLE question_choice (
+   id int NOT NULL AUTO_INCREMENT,
+   questionId int NOT NULL,
+   text tinytext NOT NULL,
+   correctAnswer boolean NOT NULL,
+   PRIMARY KEY (id),
+   CONSTRAINT FOREIGN KEY (questionId) REFERENCES question (id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO question_choice VALUES (default, '1','question choice 1,'false');
+INSERT INTO question_choice VALUES (default, '1','question choice 2,''false');
+INSERT INTO question_choice VALUES (default, '3','question choice 3,''false');
+INSERT INTO question_choice VALUES (default, '4','question choice 4,'true');

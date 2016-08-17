@@ -5,7 +5,6 @@ DROP TABLE question;
 CREATE TABLE question ( 
    id int NOT NULL AUTO_INCREMENT,
    categoryId int NOT NULL, 
-   answerId int NOT NULL,
    text varchar(128) NOT NULL,
    type ENUM('MULTIPLE_CHOICE', 'DRAG_DROP', 'MATCHING', 'TRUE_FALSE'),
    testament ENUM('OLD', 'NEW') NOT NULL,
@@ -14,7 +13,7 @@ CREATE TABLE question (
    PRIMARY KEY (id) NOT NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
 
-INSERT INTO question VALUES (default,'1','1','How old was Moses when he died?','MULTIPE_CHOICE','OLD','DISCIPLE','1.0');
-INSERT INTO question VALUES (default,'1','1','How many books in the bible','MULTIPE_CHOICE','OLD','SAINT','1.0');
+INSERT INTO question VALUES (default,'1','How old was Moses when he died?','MULTIPE_CHOICE','OLD','DISCIPLE','1.0');
+INSERT INTO question VALUES (default,'1','How many books in the bible','MULTIPE_CHOICE','OLD','SAINT','1.0');
   
 
