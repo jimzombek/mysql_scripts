@@ -1,0 +1,32 @@
+
+// This script drops, creates, and then loads test values into the question_category table.
+// Last Update 03-22-2017
+
+USE emptytomb;
+DELETE FROM question_category;
+DROP TABLE question_category;
+
+CREATE TABLE question_category (
+   id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(64),
+   dateCreated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   dateUpdated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO question_category (name) VALUES ('Marriage');
+INSERT INTO question_category (name) VALUES ('Angels');
+
+UPDATE question_category SET name="JIMZ" WHERE id=2;
+
+
+
+
+ 
+
+
+
+  
+
+  
+
