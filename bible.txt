@@ -1,0 +1,14 @@
+DELETE FROM bible;
+DROP TABLE bible;
+
+CREATE TABLE bible (
+   id int NOT NULL AUTO_INCREMENT, 
+   name varchar(40) NOT NULL,
+   history text NOT NULL,
+   version ENUM('KJV', 'NIV'),
+   PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO bible VALUES (1, 'King James Version',"The King James Version Bible (KJV) was authorized by King James I and is sometimes referred to as the 'Authorized Version'. It was translated by the Church of England and was first published in 1611.",'KJV');
+
+SELECT * FROM bible WHERE id = 1;
