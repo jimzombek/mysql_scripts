@@ -4,7 +4,7 @@ DROP TABLE bible;
 CREATE TABLE bible (
    id int NOT NULL AUTO_INCREMENT, 
    publisher varchar(40) NOT NULL,
-   datePublished timestamp NOT NULL,
+   datePublished date NOT NULL,
    name varchar(40) NOT NULL,
    shortName varchar(40) NOT NULL,
    language ENUM('ENGLISH', 'SPANISH'),
@@ -12,6 +12,6 @@ CREATE TABLE bible (
    PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO bible VALUES (1, 'Zondervan', date, 'King James Version', 'KJV', ENGLISH, 'The KJV was authorized by King James I and is sometimes referred to as the Authorized Version. It was translated by the Church of England and was first published in 1611.');
+INSERT INTO bible VALUES (1, 'Zondervan', '2008-7-04', 'King James Version', 'KJV', ENGLISH, 'The KJV was authorized by King James I and is sometimes referred to as the Authorized Version. It was translated by the Church of England and was first published in 1611.');
 
 SELECT * FROM bible WHERE id = 1;
