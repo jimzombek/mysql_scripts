@@ -5,6 +5,7 @@ DROP TABLE organization;
 CREATE TABLE organization ( 
    id int NOT NULL AUTO_INCREMENT, 
    name varchar(32) NOT NULL,
+   shortName varchar(10) NOT NULL,
    addressLine1 varchar(32) NOT NULL,
    addressLine2 varchar(32),
    city varchar(32) NOT NULL,
@@ -18,5 +19,5 @@ CREATE TABLE organization (
    PRIMARY KEY (id) NOT NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
 
-INSERT INTO organization VALUES (default, 'org 1 name','org 1 al','org 1 a2','org 1 city','org 1 providence','12345','org 1 country','1990','org 1 affiliation','org 1 web site','100');
-INSERT INTO organization VALUES (default, 'org 2 name','org 2 al','org 2 a2','org 2 city','org 2 providence','54321','org 2 country','2990','org 2 affiliation','org 2 web site','100');
+INSERT INTO organization VALUES (default, 'org name','org shortName', 'org addressL1','org addressL2','org 1 city','org 1 providence','12345','org 1 country','1990','org 1 affiliation','org 1 web site','100');
+INSERT INTO organization VALUES (default, 'org name','org shortName','org 2 a2','org 2 city','org 2 providence','54321','org 2 country','2990','org 2 affiliation','org 2 web site','100');
